@@ -1,8 +1,12 @@
+/// external modules ///
 import React from 'react';
 
-// Components
+/// components ///
 import Item from './ShoppingCartItem';
 
+/***************************************
+	MAIN
+***************************************/
 const ShoppingCart = props => {
 	const getCartTotal = () => {
 		return props.cart.reduce((acc, value) => {
@@ -23,5 +27,7 @@ const ShoppingCart = props => {
 		</div>
 	);
 };
+
+/**************************************/
 
 export default ShoppingCart;

@@ -1,8 +1,12 @@
+/// external modules ///
 import React from 'react';
 
-// Components
+/// components ///
 import Product from './Product';
 
+/***************************************
+	MAIN
+***************************************/
 const Products = props => {
 	return (
 		<div className="products-container">
@@ -16,5 +20,7 @@ const Products = props => {
 		</div>
 	);
 };
+
+/**************************************/
 
 export default Products;

@@ -1,6 +1,12 @@
+/// external modules ///
 import React from 'react';
+
+/// components ///
 import { NavLink } from 'react-router-dom';
 
+/***************************************
+	MAIN
+***************************************/
 const Navigation = props => {
 	return (
 		<div className="navigation">
@@ -11,5 +17,7 @@ const Navigation = props => {
 		</div>
 	);
 };
+
+/**************************************/
 
 export default Navigation;

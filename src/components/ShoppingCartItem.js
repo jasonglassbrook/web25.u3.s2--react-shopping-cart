@@ -1,5 +1,9 @@
+/// external modules ///
 import React from 'react';
 
+/***************************************
+	MAIN
+***************************************/
 const Item = props => {
 	return (
 		<div className="shopping-cart_item">
@@ -14,5 +18,7 @@ const Item = props => {
 		</div>
 	);
 };
+
+/**************************************/
 
 export default Item;
