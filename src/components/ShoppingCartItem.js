@@ -1,10 +1,15 @@
 /// external modules ///
 import React from 'react';
 
+/// contexts ///
+import CartContext from 'contexts/CartContext';
+
 /***************************************
 	MAIN
 ***************************************/
 const Item = (props) => {
+	const cart = React.useContext (CartContext);
+
 	return (
 		<div className="shopping-cart_item">
 
@@ -15,7 +20,7 @@ const Item = (props) => {
 				<p>$ {props.price}</p>
 				<button>Remove from cart</button>
 			</div>
-			
+
 		</div>
 	);
 };
