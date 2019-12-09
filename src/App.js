@@ -14,11 +14,13 @@ import data from './data';
 	MAIN
 ***************************************/
 const App = () => {
-	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const [ products ] = useState (data);
+	const [ cart, setCart ] = useState ([]);
 
 	const addItem = (item) => {
-		// add the given item to the cart
+		setCart (
+			(cart) => ([ ...cart, item ])
+		);
 	};
 
 	return (
