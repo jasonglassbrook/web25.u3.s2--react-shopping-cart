@@ -1,17 +1,23 @@
+/// external modules ///
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
-import data from './data';
 
-// Components
+/// components ///
 import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
-function App() {
+/// data ///
+import data from './data';
+
+/***************************************
+	MAIN
+***************************************/
+const App = () => {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
-	const addItem = item => {
+	const addItem = (item) => {
 		// add the given item to the cart
 	};
 
@@ -37,6 +43,7 @@ function App() {
 			/>
 		</div>
 	);
-}
+};
 
+/**************************************/
 export default App;
