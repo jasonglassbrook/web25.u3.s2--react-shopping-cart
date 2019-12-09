@@ -3,13 +3,13 @@ import React from 'react';
 
 /// components ///
 import { Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Products from './components/Products';
-import ShoppingCart from './components/ShoppingCart';
+import Navigation from 'components/Navigation';
+import Products from 'components/Products';
+import ShoppingCart from 'components/ShoppingCart';
 
 /// contexts ///
-import ProductContext from './contexts/ProductContext';
-import CartContext from './contexts/CartContext';
+import ProductContext from 'contexts/ProductContext';
+import CartContext from 'contexts/CartContext';
 
 /// data ///
 import data from './data';
