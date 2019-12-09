@@ -71,7 +71,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 <ProductContext.Provider value={{ products, addItem }}>
 ```
 
--   [ ] Now that we're providing our products with `state` and `addItem` function we can refactor our products route to no longer use render props.
+-   [x] Now that we're providing our products with `state` and `addItem` function we can refactor our products route to no longer use render props.
 
 ##### Before
 
@@ -89,7 +89,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 <Route exact path="/" component={Products} />
 ```
 
--   [ ] After refactoring you'll notice a few errors... Don't worry we'll clean those up shortly!
+-   [x] After refactoring you'll notice a few errors... Don't worry we'll clean those up shortly!
 
 #### STEP 4 - Consuming data with ProductContext
 
@@ -127,7 +127,7 @@ const { products, addItem } = useContext(ProductContext);
 
 -   [x] Now pass a value prop to our `CartContext.Provider`, this value prop is going to contain our `cart` state.
 
--   [ ] Now that we're providing our cart data, we can start to refactor our `Navigation` and `ShoppingCart` components.
+-   [x] Now that we're providing our cart data, we can start to refactor our `Navigation` and `ShoppingCart` components.
 
 -   [ ] Let's start with our `ShoppingCart` component first. Go ahead and refactor the `ShoppingCart` route to no longer use render props. This will throw us an error, but we'll be able to resolve it quickly.
 
