@@ -11,7 +11,7 @@ import CartContext from 'contexts/CartContext';
 	MAIN
 ***************************************/
 const ShoppingCart = () => {
-	const cart = React.useContext (CartContext);
+	const { cart } = React.useContext (CartContext);
 
 	const getCartTotal = () => {
 		return cart.reduce ((acc, value) => {

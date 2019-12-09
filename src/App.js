@@ -42,7 +42,7 @@ const App = () => {
 		value={{ products, addItem }}
 		>
 			<CartContext.Provider
-			value={cart, removeItem }
+			value={{ cart, removeItem }}
 			>
 				<div className="App">
 					<Navigation/>

@@ -11,7 +11,7 @@ import CartContext from 'contexts/CartContext';
 	MAIN
 ***************************************/
 const Navigation = () => {
-	const cart = React.useContext (CartContext);
+	const { cart } = React.useContext (CartContext);
 
 	return (
 		<div className="navigation">
