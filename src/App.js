@@ -26,7 +26,7 @@ const App = () => {
 
 	const addItem = (item) => {
 		setCart ((cart) => (
-			[ ...cart, item.id ]
+			cart.includes (item.id) ? cart : [ ...cart, item.id ]
 		));
 	};
 
