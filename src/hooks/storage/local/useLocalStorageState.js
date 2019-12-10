@@ -2,25 +2,24 @@
 import React from 'react';
 
 /// internal modules ///
-import getLocalStorage from './getLocalStorage';
-import setLocalStorage from './setLocalStorage';
+import getStorage from './getLocalStorage';
+import setStorage from './setLocalStorage';
 
 /***************************************
   MAIN
 ***************************************/
-const useLocalStorageState = (key, initValue) => {
-  const [state, _setState] = React.useState (() => (
-    getLocalStorage (key, initValue)
+const useStorageState = (key, initValue) => {
+  const [state, setState] = React.useState (() => (
+    getStorage (key, initValue)
   ));
 
-  const setState = (value) => {
-    _setState (value);
-    setLocalStorage (key, value);
-  };
+  React.useEffect (() => {
+    setStorage (key, state);
+  }, [key, state]);
 
   return [state, setState];
 };
 
 /**************************************/
 
-export default useLocalStorageState;
+export default useStorageState;
