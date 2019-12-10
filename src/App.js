@@ -30,9 +30,9 @@ const App = () => {
 		));
 	};
 
-	const removeItem = (id) => {
+	const removeItem = (item) => {
 		setCart ((cart) => (
-			cart.filter ((el) => (el !== id))
+			cart.filter ((el) => (el !== item.id))
 		));
 	}
 
