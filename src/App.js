@@ -22,7 +22,7 @@ const App = () => {
 	const [ cart, setCart ] = React.useState ([]);
 
 	const addItem = (item) => {
-		setCart (
+	const [ cart, setCart ] = storage.session.useState ('cart', []);
 			(cart) => (
 				[ ...cart, item ]
 			)
