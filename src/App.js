@@ -1,6 +1,9 @@
 /// external modules ///
 import React from 'react';
 
+/// hooks ///
+import storage from 'hooks/storage';
+
 /// components ///
 import { Route } from 'react-router-dom';
 import Navigation from 'components/Navigation';
@@ -19,22 +22,18 @@ import data from './data';
 ***************************************/
 const App = () => {
 	const [ products ] = React.useState (data);
-	const [ cart, setCart ] = React.useState ([]);
+	const [ cart, setCart ] = storage.session.useState ('cart', []);
 
 	const addItem = (item) => {
-	const [ cart, setCart ] = storage.session.useState ('cart', []);
-			(cart) => (
-				[ ...cart, item ]
-			)
-		);
+		setCart ((cart) => (
+			[ ...cart, item.id ]
+		));
 	};
 
 	const removeItem = (id) => {
-		setCart (
-			(cart) => (
-				cart.filter ((item) => (item.id !== id))
-			)
-		)
+		setCart ((cart) => (
+			cart.filter ((el) => (el !== id))
+		));
 	}
 
 	return (
