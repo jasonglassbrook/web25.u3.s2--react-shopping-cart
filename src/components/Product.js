@@ -13,7 +13,7 @@ const Product = ({ product, addItem }) => {
 
 			<p className="price">${product.price}</p>
 
-			<button onClick={() => addItem (product)}>
+			<button onClick={() => { addItem (product); }}>
 				Add to cart
 			</button>
 		</div>
