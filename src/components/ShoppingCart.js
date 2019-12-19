@@ -1,27 +1,45 @@
+/// external modules ///
 import React from 'react';
 
-// Components
+/// components ///
 import Item from './ShoppingCartItem';
 
-const ShoppingCart = props => {
+/// contexts ///
+import CartContext from 'contexts/CartContext';
+import ProductContext from 'contexts/ProductContext';
+
+/***************************************
+	MAIN
+***************************************/
+const ShoppingCart = () => {
+	const { cart } = React.useContext (CartContext);
+	const { products } = React.useContext (ProductContext);
+	const items = products.filter ((item) => (cart.includes (item.id)));
+
 	const getCartTotal = () => {
-		return props.cart.reduce((acc, value) => {
-			return acc + value.price;
-		}, 0).toFixed(2);
+		return (
+			items
+			.reduce ((acc, value) => (acc + value.price), 0)
+			.toFixed (2)
+		);
 	};
 
 	return (
 		<div className="shopping-cart">
-			{props.cart.map(item => (
-				<Item key={item.id} {...item} />
+
+			{items.map (item => (
+				<Item key={item.id} product={item}/>
 			))}
 
 			<div className="shopping-cart__checkout">
 				<p>Total: ${getCartTotal()}</p>
 				<button>Checkout</button>
 			</div>
+
 		</div>
 	);
 };
+
+/**************************************/
 
 export default ShoppingCart;
